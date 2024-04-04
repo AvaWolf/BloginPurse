@@ -1,9 +1,13 @@
 import s from './Search.module.scss'
+import { FaSearch } from "react-icons/fa";
 
 const Search:React.FC = () => {
 	return (
 		<div className={s.megaContainer}>
-			<input placeholder="Search..." type="search" />
+		<span>
+		<FaSearch />
+		<input placeholder="Search..." type="search" />
+		</span>
 		</div>
 		)
 }

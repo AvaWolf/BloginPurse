@@ -4,8 +4,7 @@ import Search from './../Search/Search'
 const Home:React.FC = () => {
 	return (
 		<div className={s.megaContainer}>
-			
-			{/*<Search />*/}
+			<Search />
 		</div>
 		)
 }

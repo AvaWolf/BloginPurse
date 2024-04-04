@@ -1,9 +1,17 @@
+.animBlock{
+	transform: translateY(-70px);
+	opacity: 0;
+	transition-duration:500ms;
+}
+
+
 .megaContainer {
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	padding: 20px;
 	justify-content: center;
+	overflow:hidden;
 	
 
 	.container{
@@ -21,7 +29,11 @@
 		border-top: 2px solid rgba(22,228,90,0.3);
 		border-left:2px solid rgba(22,228,90,0.5);
 		border-right:2px solid rgba(22,228,90,0.5);
+		transform: translateY(0px);
+		opacity: 1;
+		transition:500ms linear;
 
+	}
 
 		.item1 {
 			color: whitesmoke;
@@ -49,8 +61,24 @@
 		border-top: 2px solid rgba(22,228,90,0.3);
 		border-left:2px solid rgba(22,228,90,0.5);
 		border-right:2px solid rgba(22,228,90,0.5);
+		transition-duration: 500ms;
 
 		
+			}
+
+			input:invalid{
+				border: 2px solid red;
+				transition-duration: 500ms;
+				animation: inputAnim 200ms linear forwards;
+			}
+
+			
+			
+
+			@keyframes inputAnim {
+				0%{transform: translateX(-10px);}
+				50%{transform: translateX(10px);}
+				100%{transform: translateX(0px);}
 			}
 
 		}
@@ -75,5 +103,5 @@
 
 
 
-	}
+	
 }
